@@ -1,2 +1,2 @@
 # js-exercises
-Este repositório contém exercícios e desafios de algoritmos em JavaScript, desenvolvidos como parte das atividades acadêmicas da faculdade.
+This repository contains algorithm exercises and challenges in JavaScript, developed as part of academic activities during college.

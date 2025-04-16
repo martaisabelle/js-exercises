@@ -1,0 +1,27 @@
+<script>
+    let dia = parseInt(prompt("Digite o dia:"));
+    let mes = parseInt(prompt("Digite o mês:"));
+    let ano = parseInt(prompt("Digite o ano:"));
+
+    let valida = true;
+
+    // Verificações básicas
+    if (dia <= 0 || mes <= 0 || mes > 12 || ano <= 0) {
+      valida = false;
+    } else {
+      // Dias por mês, considerando ano bissexto
+      let diasNoMes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+      // Verifica se o ano é bissexto
+      if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+        diasNoMes[1] = 29;
+      }
+
+      if (dia > diasNoMes[mes - 1]) {
+        valida = false;
+      }
+    }
+
+    // Resultado
+    console.log(valida ? "Válida" : "Inválida");
+  </script>
